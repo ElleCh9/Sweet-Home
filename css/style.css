@@ -1,0 +1,144 @@
+root{
+
+    --primary-color-bl: #F7ECDE;
+    --primary-color-bd: #E9DAC1;
+    --secondary-light-teal: #9ED2C6;
+    --secondary-teal: #54BAB9;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Logo */
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1;
+}
+.logo-img{
+    border-radius: 20px;
+    border: 1px red solid;
+}
+
+/* Menu */
+.menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #54BAB9 ;
+    padding: 2%;
+    border-radius: 0 10px 10px 0;
+}
+.menu ul{list-style-type: none;}
+.menu ul a { text-decoration: none; color: #F7ECDE;}
+.menu ul a li { font-size: 1.5rem;margin-top: 15%;}
+
+/* Hero section */
+.hero-section{
+    position: relative;
+    margin-top: 2%;
+    height: 70vh;
+    background-image: url("/asset/cater-yang-maz7yW85tY8-unsplash.jpg");
+    background-position: center center;
+    background-size: 75%;
+    background-repeat: no-repeat;   
+}
+.hero-title h1{
+    position: absolute;
+    bottom: 50%;
+    right: 2%;
+    color: #F7ECDE;
+    background-color: black;
+    letter-spacing: 0.5rem;
+    display: inline-block;
+    
+}
+.hero-title span{
+    color: black;
+    background-color: #F7ECDE;
+}
+
+/* Spacing */
+
+.p-1{ padding: 2%;}
+.mt-1{ margin-top: 2%;}
+.mt-2{ margin-top: 4%;}
+.mtn-2{ margin-top: -4%;}
+.my-2{ margin: 4% 0;}
+
+
+/* Sizing */
+.fs-1{ font-size: 1.5rem;}
+.fs-2{ font-size: 2rem;}
+.fs-3{ font-size: 3rem;}
+
+
+/* Main section*/
+.text-left{ text-align: left;}
+.text-right{ text-align: right;}
+.text-center{ text-align: center;}
+.container{
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+blockquote{
+    border-top: 2px  #54BAB9 solid;
+    padding: 1rem;
+   
+}
+.container.col-100 p{ padding: 0 8rem}
+.img-fluid{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.fix-img{
+    max-height: 700px;
+}
+
+
+/* Flexbox */
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    gap: 1rem;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    
+}
+.justify-center{ justify-content: center;}
+.col-100{ width: 100%;}
+.col-50{ width: 50%; padding: 5%}
+.col-33{ width: 33.33%;}
+
+@media(max-width:800px){
+    .flex-container{ flex-wrap: wrap;}
+    .col-50,.col-33{
+        width: 100%;
+    }
+    .menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: auto;
+        left: auto;
+        z-index: 1;
+        border-radius:  10px 0 0 10px;
+        
+    }
+    .fix-img{ max-height: none;}
+}
